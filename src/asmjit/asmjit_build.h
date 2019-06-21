@@ -249,12 +249,14 @@
 // \def ASMJIT_ARCH_64BIT
 // True if the target architecture is 64-bit.
 
+#ifndef ASMJIT_ARCH_X64
 #if (defined(_M_X64  ) || defined(__x86_64) || defined(__x86_64__) || \
      defined(_M_AMD64) || defined(__amd64 ) || defined(__amd64__ ))
 # define ASMJIT_ARCH_X64 1
 #else
 # define ASMJIT_ARCH_X64 0
 #endif
+#endif // ASMJIT_ARCH_X64
 
 #if (defined(_M_IX86 ) || defined(__X86__ ) || defined(__i386  ) || \
      defined(__IA32__) || defined(__I86__ ) || defined(__i386__) || \
